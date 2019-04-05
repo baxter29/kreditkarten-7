@@ -1,0 +1,260 @@
+$bet : space-between;
+$up : uppercase;
+$even : space-evenly;
+$start : flex-start;
+$end : flex-end;
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body , html
+{
+	font-size: 16px;
+
+}
+
+div , span
+{
+	box-sizing: border-box;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+.container
+{
+	width: 100%;
+	margin: 0 auto;
+	max-width: 1280px;
+}
+
+.d-f
+{
+	display: flex;
+}
+
+.d-b
+{
+	display: block;
+}
+
+.flex-c
+{
+	justify-content: center;
+	vertical-align: center;
+}
+
+.t-w
+{
+	color: #fff;
+}
+
+.m-w
+{
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+/* header */
+
+.header
+{
+	background: #fff;
+	width: 100%;
+	.row
+	{
+		@extend .container , .d-f;
+		align-items: center;
+		justify-content: $bet;
+		
+
+		.logo
+		{
+			@extend .d-f;
+			align-items: center;
+			padding: 15px 0;
+			.logo__img , .logo__name
+			{
+				@extend .d-b;
+			}
+			.logo__name
+			{
+				color: #999999;
+				font: 30px/35px "Mangal" , sans-serif;
+				font-weight: bold;
+				letter-spacing: 3px;
+				margin-left: 10px;
+
+			}
+		}
+		
+		
+	}
+
+}
+
+main
+{
+	.section__header
+	{
+
+		@extend .m-w;
+		min-height: 373px;
+		background: url("../img/main-bg.png") no-repeat center / cover;
+        .wrapper
+        {
+        	min-height: inherit;
+        	@extend .d-f, .flex-c;
+        	align-items: center;
+        	max-width: 1100px;
+        	margin: 0 auto;
+             .block__info
+             {
+             	@extend .m-w ,.d-f;
+				flex-direction: column;
+             	.info__title
+             	{
+             		font: 30px/35px "Mangal" , sans-serif;
+					font-weight: bold;
+					letter-spacing: 3px;
+             	}
+
+             	.info__description
+             	{
+             		font:12px/20px "Mangal" , sans-serif;;
+					font-weight: bold;
+					letter-spacing: 1.2px;
+             	}
+             		.info__dropdown-block
+		        	{
+		        		@extend .d-f;
+		        		align-items: center;
+		        		background: #fff;
+		        		display: inline-flex;
+		        		height: 42px;
+		        		justify-content: space-between;
+		        		border-radius: 15px;
+		        		max-width: 465px;
+		        		.dropdown__btn
+		        		{
+							width: 70%;
+		        			background: #1f5b58 url("../img/arrow.png") no-repeat center / 50%;
+							width: 69px;
+		        			height: 42px;
+		        			border: none;
+		        			border-top-right-radius: 15px;
+		        			border-bottom-right-radius: 15px;
+		        			cursor: pointer;
+		        			transition: .3s;
+		        			&:hover
+		        			{
+		        				box-shadow: 0 0 10px #1f5b58;
+		        			}
+		        		}
+		        		.dropdown__value
+		        		{
+							width: calc(100% - 30px);
+		        			height: 42px;
+		        			border: none;
+		        			padding: 0 20px;
+		        			border-top-left-radius: 15px;
+		        			border-bottom-left-radius: 15px;
+
+		        		}
+		        	}
+             }
+             .block__modal
+             {
+             	max-width: 367px;
+				background: rgba(0,0,0,.7);
+				border-radius: 15px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				div
+				{
+					padding: 20px;
+				}
+				.modal__title
+				{
+					font: 20px/25px "Mangal" , sans-serif;
+					font-weight: bold;	
+					letter-spacing: 2px;
+
+				}
+				.modal__txt
+				{
+					font: 12px/17px "Mangal" , sans-serif;
+					font-weight: bold;
+					letter-spacing: 1.2px;
+					margin: 20px auto;
+				}
+				.modal__btn
+				{
+					background-color: #1f5b58;
+					border-radius: 15px;
+					border: none;
+					padding: 10px 25px;
+					cursor: pointer;
+					transition: .3s;
+					font: 10px/17px "Mangal" , sans-serif;
+					font-weight: bold;
+					letter-spacing: 1px;
+					
+					&:hover
+					{
+						box-shadow: 0 0 10px #1f5b58; 
+					}
+
+				}
+				.modal__help
+				{
+					margin: 20px auto;
+					font: 10px/17px "Mangal" , sans-serif;
+					font-weight: bold;
+					letter-spacing: 1px;
+					display: block;
+				}
+             }
+
+        
+
+        }
+	}
+
+	.cards__items
+	{
+		max-width: 940px;
+		margin: 0 auto;
+		.card__item
+		{
+			border: 1px solid #999999;
+			background-color: #ffffff;
+			.card__name
+			{
+				color: #245e5b;
+				font: 17px/15px "Mangal" , sans-serif;
+				font-weight: bold;
+				letter-spacing: 1.7px;
+			}
+			.card__blocks
+			{
+				@extend .d-f;
+				.card__block
+				{
+					max-width: 217px;
+				    color: #000;
+				}
+			}
+		}
+
+	}
+}
