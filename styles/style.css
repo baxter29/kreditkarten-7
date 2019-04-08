@@ -16,7 +16,7 @@ a {
   margin: 0 auto;
   max-width: 1280px; }
 
-.d-f, .header .row, .header .row .logo, main .section__header .wrapper, main .section__header .wrapper .block__info, main .section__header .wrapper .block__info .info__dropdown-block, main .cards__items .card__item .card__blocks {
+.d-f, .header .row, .header .row .logo, main .section__header .wrapper, main .section__header .wrapper .block__info, main .section__header .wrapper .block__info .info__dropdown-block, main .cards__items .card__item .row, main .cards__items .card__item .row .col .card__blocks {
   display: flex; }
 
 .d-b, .header .row .logo .logo__img, .header .row .logo .logo__name {
@@ -24,7 +24,7 @@ a {
 
 .flex-c, main .section__header .wrapper {
   justify-content: center;
-  vertical-align: center; }
+  align-items: center; }
 
 .t-w {
   color: #fff; }
@@ -59,8 +59,21 @@ main .section__header {
     align-items: center;
     max-width: 1100px;
     margin: 0 auto; }
+    @media screen and (max-width: 1000px) {
+      main .section__header .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     main .section__header .wrapper .block__info {
       flex-direction: column; }
+      @media screen and (max-width: 1000px) {
+        main .section__header .wrapper .block__info .info__title,
+        main .section__header .wrapper .block__info .info__description {
+          margin: 10px 0; }
+        main .section__header .wrapper .block__info {
+          margin: 30px 0;
+          align-items: center; } }
       main .section__header .wrapper .block__info .info__title {
         font: 30px/35px "Mangal" , sans-serif;
         font-weight: bold;
@@ -96,6 +109,9 @@ main .section__header {
           padding: 0 20px;
           border-top-left-radius: 15px;
           border-bottom-left-radius: 15px; }
+          @media screen and (max-width: 1000px) {
+            main .section__header .wrapper .block__info .info__dropdown-block .dropdown__value {
+              width: 240px; } }
     main .section__header .wrapper .block__modal {
       max-width: 367px;
       background: rgba(0, 0, 0, 0.7);
@@ -105,6 +121,9 @@ main .section__header {
       justify-content: center;
       align-items: center;
       text-align: center; }
+      @media screen and (max-width: 1000px) {
+        main .section__header .wrapper .block__modal {
+          margin: 30px 0; } }
       main .section__header .wrapper .block__modal div {
         padding: 20px; }
       main .section__header .wrapper .block__modal .modal__title {
@@ -139,14 +158,65 @@ main .cards__items {
   margin: 0 auto; }
   main .cards__items .card__item {
     border: 1px solid #999999;
-    background-color: #ffffff; }
-    main .cards__items .card__item .card__name {
-      color: #245e5b;
-      font: 17px/15px "Mangal" , sans-serif;
-      font-weight: bold;
-      letter-spacing: 1.7px; }
-    main .cards__items .card__item .card__blocks .card__block {
-      max-width: 217px;
-      color: #000; }
+    background-color: #ffffff;
+    margin: 40px auto; }
+    main .cards__items .card__item .row {
+      justify-content: center; }
+      main .cards__items .card__item .row .col {
+        margin: 0 15px; }
+        main .cards__items .card__item .row .col:first-child {
+          margin: 61px 0 0 0; }
+          @media screen and (max-width: 1000px) {
+            main .cards__items .card__item .row .col:first-child {
+              display: none; } }
+        main .cards__items .card__item .row .col .card__name {
+          color: #245e5b;
+          font: 17px/15px "Mangal" , sans-serif;
+          font-weight: bold;
+          letter-spacing: 1.7px;
+          margin: 15px 0; }
+        main .cards__items .card__item .row .col .card__image {
+          display: none; }
+          @media screen and (max-width: 1000px) {
+            main .cards__items .card__item .row .col .card__image {
+              display: block;
+              margin: 15px 0 0 0; } }
+        main .cards__items .card__item .row .col .card__description {
+          margin: 5px 0 50px 0; }
+        @media screen and (max-width: 1000px) {
+          main .cards__items .card__item .row .col .card__blocks {
+            flex-direction: column; } }
+        main .cards__items .card__item .row .col .card__blocks .card__block {
+          flex-basis: 33%;
+          color: #000;
+          background-color: #30a49d;
+          margin: 15px 5px;
+          text-align: center; }
+          main .cards__items .card__item .row .col .card__blocks .card__block[data-block="0"] {
+            background: #acdbd8;
+            box-shadow: 0 6px #a5bdbc; }
+          main .cards__items .card__item .row .col .card__blocks .card__block[data-block="1"] {
+            background: #83c8c4;
+            box-shadow: 0 6px #799d9b; }
+          main .cards__items .card__item .row .col .card__blocks .card__block[data-block="2"] {
+            background: #59b6b1;
+            box-shadow: 0 6px #4c7c79; }
+          main .cards__items .card__item .row .col .card__blocks .card__block:first-child {
+            margin: 15px 5px 15px 0; }
+          main .cards__items .card__item .row .col .card__blocks .card__block .title {
+            font: 15px/15px "Mangal - Bold" , sans-serif;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin: 10px; }
+          main .cards__items .card__item .row .col .card__blocks .card__block .txt {
+            color: #000000;
+            font-family: 12px/12px "Mangal";
+            font-weight: bold;
+            line-height: 25px;
+            margin: 10px; }
+    main .cards__items .card__item .card__item-grey {
+      background-color: #e8eeee;
+      text-align: center;
+      padding: 1% 5%; }
 
 /*# sourceMappingURL=style.css.map */
