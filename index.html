@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Schanzab 7</title>
+	<link rel="stylesheet" href="styles/animate.css">
 	<link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
@@ -29,6 +30,17 @@
 	             </p>
 	             <div class="info__dropdown-block">
 	             	<input type="text" class="dropdown__value" placeholder="Welche Art von Kreditkarte suchen Sie?">
+	             	<div class="dropdown__items">
+	             		<div class="dropdown__item">
+	             			<img src="img/visa-icon.png" alt="visa-icon.png" class="dropdown__item-img">
+	             			<span class="dropdown__item-span">Visa</span>
+	             		</div>
+	             		<div class="dropdown__item">
+	             			<img src="img/mastercard-icon.png" alt="mastercard-icon.png" class="dropdown__item-img">
+	             			<span class="dropdown__item-span">Master Card</span>
+	             		</div>
+	             	</div>
+
 	             	<button class="dropdown__btn">
 	             		
 	             	</button>
@@ -242,10 +254,12 @@
 				Was sind Visa-Karten?
 			</h4>
 			<p class="about__cards-txt">
-				Visa ist eine Firma, die jede Transaktion abwickelt, wenn Sie eine Visa-Kreditkarte verwenden.
-				<br>
+				Visa ist <span>eine Firma, die jede Transaktion</span> abwickelt, wenn Sie eine Visa-Kreditkarte verwenden.
+			</p>
+			<p class="about__cards-txt">	
 				Obwohl ihr Logo auf vielen Kreditkarten erscheint, liefert Visa sie nicht, berechnet keine Zinsen und Gebühren oder handelt als Kunde direkt mit Ihnen.
-				<br>
+			</p>
+			<p class="about__cards-txt">
 				Sie können auch Kreditkarten erhalten, die von Unternehmen wie MasterCard und American Express verarbeitet werden.
 			</p>
 	    </article>
@@ -255,12 +269,30 @@
 				Solltest du eine Visa-Karte bekommen?
 			</h4>
 			<p class="about__cards-txt">
-				Visa bietet eigene Prämienvorteile und ein Transaktionsschutzprogramm mit dem Namen Verified by Visa.
+				Visa bietet eigene <span>Prämienvorteile</span> und ein Transaktionsschutzprogramm mit dem Namen <span>Verified by Visa.</span>
 			</p>
 	    </article>
+	    <div class="about__cards-green__block">
+	    	<div class="green__block-col">
+	    		
+	    	</div>
+	    	<p class="green__block-txt">
+	    		MasterCard und American Express bieten jedoch ähnliche Vorteile. Wählen Sie also eine Karte mit den gewünschten Funktionen, anstatt sich auf Visa-Karten zu beschränken.
+	    	</p>
+	    </div>
 	</section>
+	<div class="modal__block">
+		<div class="modal__wrapper">
+			<p class="modal__block-text">
+				Wir verwenden Cookies, um unseren Service zu verbessern, und erlauben uns und Dritten, die auf Kreditkarten und anderen Websites angezeigten Anzeigen anzupassen.  Wenn Sie fortfahren, stimmen Sie der Verwendung von Cookies zu.
+			</p>
+			<button type="submit" class="modal__block-btn btn" id="modal_btn">
+				Ich nehme an
+			</button>
+	    </div>
+	</div>
 </main>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/script.js"></script>	
 </body>
 </html>

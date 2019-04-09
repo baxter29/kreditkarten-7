@@ -166,6 +166,65 @@ main
 		        		justify-content: space-between;
 		        		border-radius: 15px;
 		        		max-width: 465px;
+		        		margin-top: 25px;
+		        		position: relative;
+		        		top: 0;
+		        		left: 0;
+		        		.dropdown__items
+		        		{
+		        			width: 269px;
+							position: absolute;
+		        			color: #000;
+		        			background: #fff;
+		        			top: 42px;
+		        			right: 59px;
+		        			opacity: 0;
+		        			transition: .5s;
+		        			@media screen and (max-width: 1000px) {
+		        					&
+		        					{
+		        						right: 68px;
+		        					}
+		        				}
+
+		        			.dropdown__item
+		        			{
+
+		        				display: flex;
+		        				align-items: center;
+		        				justify-content: flex-start;
+		        				padding: 15px 15px;
+		        				transition: .3s;
+		        				cursor: pointer;
+		        				border-bottom: 2px solid #000;
+		        				&:hover
+		        				{
+									background: #77a78f;
+
+		        				}
+
+		        				.dropdown__item-img , 
+		        				.dropdown__item-span
+		        				{
+		        					display: block;
+		        				}
+		        				.dropdown__item-span
+		        				{
+		        					font: 20px/20px "Mangal" , sans-serif;
+									font-weight: bold;
+									line-height: 20px;
+									letter-spacing: 2px;
+									margin-left: 15px;
+		        				}
+
+
+		        			}
+		        		}
+		        		.js-toggle
+		        		{
+		        			opacity: 1;
+		        			
+		        		}
 		        		.dropdown__btn
 		        		{
 							width: 70%;
@@ -195,6 +254,18 @@ main
 								{
 									width: 240px;
 								}
+
+							}
+							@media screen and (max-width: 560px)
+							{
+								&
+								{
+									width: 215px;
+									font-size: 11px;
+								}
+								
+								
+								
 							}
 		        		}
 		        	}
@@ -383,6 +454,133 @@ main
 			}
 			
 		}
+    }
+    .about__cards
+    {
+    	@extend .cards__items;
+    	.about__cards-green__block
+    	{
+    		position: relative;
+    		top: 0;
+    		left: 0;
+    		background: #e8eeee;
+    		min-height: 73px;
+    		margin-top: 40px;
+    		margin-bottom: 100px;
+    		overflow: hidden;
+    		.green__block-col
+    		{
+    			width: 30px;
+    			height: 1000px;
+				min-height: inherit;
+    			background:#1f5b58;
+    			position: absolute;
+    			top: 0;
+    			left: 0;
+
+
+    		}
+    		.green__block-txt
+    		{
+    			color: #245e5b;
+				font: 13px/20px "Mangal" , sans-serif;
+				font-weight: bold;
+				letter-spacing: 1.3px;
+				padding: 17px 0;
+				margin:0 5px 0 50px;
+    		}
+    	}
+    	.about__card__block
+    	{
+    		padding: 0 6% 0 5%;
+    		margin-top: 35px;
+    		.about__cards-title
+    		{
+    			color: #1f5b58;
+				font: 30px/30px "Mangal" , sans-serif;
+				font-weight: bold;
+				letter-spacing: 3px;
+				margin-top: 20px;
+				@media screen and (max-width: 764px) {
+					&
+					{
+						font: 20px/20px "Mangal" , sans-serif;
+
+					}
+				}
+    		}
+    		.about__cards-txt
+    		{
+				color: #000000;
+				font: 15px/20px "Mangal" , sans-serif;
+				font-weight: bold;
+				letter-spacing: 1.5px;
+				margin-top: 20px;
+				&:first-child
+				{
+					margin-top: 25px;
+				}
+				span
+				{
+
+					letter-spacing: 1.5px;
+					text-decoration: underline;
+				}
+    		}
+    	}
+    }
+    .modal__block
+    {
+    	background-color: #47575f;
+    	width: 100%;
+    	max-width: 1920px;
+    	position: fixed;
+    	top: 100%;
+    	.modal__wrapper
+    	{
+    		
+	    	color: #ffffff;
+			font: 12px/17px "Mangal", sans-serif;
+			font-weight: bold;
+			letter-spacing: 1.2px;
+			text-align: center;
+			width: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+			padding: 25px 0;
+			flex-direction: row;
+			@media screen and (max-width: 764px) {
+				&
+				{
+					flex-direction: column;
+					width: 90%;
+				}
+				.modal__block-text
+				{
+					margin: 25px auto;
+				}
+			}
+			.modal__block-btn
+			{
+				background-color: #30a49d;
+				color: #fff;
+				border-radius: 15px;
+				border: none;
+				padding: 10px 15px;
+				white-space: nowrap;
+				cursor: pointer;
+				transition: .3s;
+				margin-left: 15px;
+
+				&:hover
+				{
+					box-shadow: 0 0 10px #30a49d;
+				};
+			}
+    	}
+    
     }
 
 }
